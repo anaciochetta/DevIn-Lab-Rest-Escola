@@ -15,6 +15,7 @@ namespace Escola.Domain.Models
         public string Sobrenome { get; set; }
         public string Email { get; set; }
         public DateTime DataNascimento { get; set; }
+        public IList<Boletim> Boletins { get; set; }
 
         public Aluno(AlunoDTO aluno)
         {
@@ -27,16 +28,18 @@ namespace Escola.Domain.Models
         }
         public Aluno()
         {
-            
+
         }
-        public void Update(Aluno aluno){
+        public void Update(Aluno aluno)
+        {
             Nome = aluno.Nome;
             Email = aluno.Email;
             Matricula = aluno.Matricula;
             Sobrenome = aluno.Sobrenome;
             DataNascimento = aluno.DataNascimento;
         }
-         public void Update(AlunoDTO aluno){
+        public void Update(AlunoDTO aluno)
+        {
             Nome = aluno.Nome;
             Email = aluno.Email;
             Matricula = aluno.Matricula;

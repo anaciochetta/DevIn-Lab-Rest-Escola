@@ -22,15 +22,18 @@ namespace Escola.Infra.DataBase.Mappings
                     .HasColumnType("uniqueidentifier");
 
             builder.Property(x => x.order_date)
-            .HasColumnName("DATA DE PEDIDO")
-            .HasColumnType("DATE");
+                    .HasColumnName("FINAL_SEMESTRE")
+                    .HasColumnType("DATE");
 
-            /* buildere.Entity<>() //o exame
-            .HasOne<Cliente>(e => e.Cliente) //possui 1 do tipo cliente - dentro do exame oq representa o cliente
-            .WithMany(c => c.Exames) //possui N do tipo exame - dentro do cliente oq representa o exame - navegação inversa
-            .HasForeignKey(e => e.ClienteId) //chave estrangeira da relação - exame que possui a fk */
+            builder
+                    .HasOne(x => x.Aluno)
+                    .WithMany(x => x.Boletins)
+                    .HasForeignKey(x => x.AlunoId);
 
-
+            //não tenho certeza
+            builder
+                    .HasMany(x => x.Notas)
+                    .WithOne(x => x.Boletim);
         }
     }
 }

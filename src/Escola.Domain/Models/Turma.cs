@@ -5,10 +5,11 @@ using System.Threading.Tasks;
 
 namespace Escola.Domain.Models
 {
-    public class Materia
+    public class Turma
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
-        public virtual List<NotasMateria> NotasMaterias { get; set; }
+        public string Curso { get; set; }
+        public List<Aluno> Alunos { get; set; }
+
     }
 }
