@@ -12,8 +12,8 @@ namespace Escola.Domain.Interfaces.Services
         IList<AlunoDTO> ObterTodos(Paginacao paginacao);
         AlunoDTO ObterPorId(Guid id);
         void Inserir(AlunoDTO aluno);
-        void Excluir (Guid id);
-        void Atualizar (AlunoDTO aluno);
+        void Excluir(Guid id);
+        void Atualizar(AlunoDTO aluno);
         public int ObterTotal();
     }
 }

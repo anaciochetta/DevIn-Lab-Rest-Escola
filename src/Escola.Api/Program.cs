@@ -9,8 +9,13 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddDbContext<EscolaDBContexto>();
 
+//ALUNO
 builder.Services.AddScoped<IAlunoRepositorio, AlunoRepositorio>();
 builder.Services.AddScoped<IAlunoServico, AlunoServico>();
+
+//MATERIA
+builder.Services.AddScoped<IMateriaRepositorio, MateriaRepositorio>();
+builder.Services.AddScoped<IMateriaServico, MateriasServico>();
 
 builder.Services.AddMemoryCache();
 //pode colocar qualquer tipo genérico ali no typeof que ele vai injetar

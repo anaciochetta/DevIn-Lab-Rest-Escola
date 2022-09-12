@@ -13,6 +13,5 @@ namespace Escola.Domain.Models
         public int BoletimId { get; set; }
         public virtual Boletim Boletim { get; set; }
         public int Nota { get; set; }
-
     }
 }

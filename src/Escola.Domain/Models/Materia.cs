@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Escola.Domain.DTO;
 
 namespace Escola.Domain.Models
 {
@@ -10,5 +11,26 @@ namespace Escola.Domain.Models
         public int Id { get; set; }
         public string Nome { get; set; }
         public virtual List<NotasMateria> NotasMaterias { get; set; }
+
+        public Materia() { }
+
+        public Materia(MateriaDTO materia)
+        {
+            Id = materia.Id;
+            Nome = materia.Nome;
+            NotasMaterias = materia.NotasMaterias;
+        }
+        public void Update(Materia materia)
+        {
+            Id = materia.Id;
+            Nome = materia.Nome;
+            NotasMaterias = materia.NotasMaterias;
+        }
+        public void Update(MateriaDTO materia)
+        {
+            Id = materia.Id;
+            Nome = materia.Nome;
+            NotasMaterias = materia.NotasMaterias;
+        }
     }
 }

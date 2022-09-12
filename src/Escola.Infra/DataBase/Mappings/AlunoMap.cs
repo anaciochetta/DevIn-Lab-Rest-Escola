@@ -40,15 +40,13 @@ namespace Escola.Infra.DataBase.Mappings
             builder.Property(x => x.DataNascimento)
                     .HasColumnName("DATA_NASCIMENTO")
                     .HasColumnType("DATE");
-            
 
-             builder.Property(x => x.Matricula)
-                    .HasColumnName("Matricula")
-                    .HasColumnType("int"); 
 
-             builder.HasIndex(x => x.Matricula).IsUnique();
+            builder.Property(x => x.Matricula)
+                   .HasColumnName("Matricula")
+                   .HasColumnType("int");
 
-            
+            builder.HasIndex(x => x.Matricula).IsUnique();
         }
     }
 }
