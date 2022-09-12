@@ -19,7 +19,7 @@ namespace Escola.Infra.DataBase.Mappings
 
             builder.Property(x => x.Id)
                    .HasColumnName("ID")
-                   .HasColumnType("uniqueidentifier");
+                   .HasColumnType("int");
 
             builder.Property(x => x.Nome)
                     .HasColumnName("NOME")
