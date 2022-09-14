@@ -32,17 +32,26 @@ namespace Escola.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public IActionResult GetById([FromRoute] int id)
         {
             var materias = _materiasServico.GetById(id);
             return Ok(materias);
         }
 
-        [HttpGet("{name}")]
+        [HttpGet("/NomeMateria/{name}")]
         public IActionResult GetByName(string name)
         {
             var materias = _materiasServico.GetByName(name);
             return Ok(materias);
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] MateriaDTO materia)
+        {
+
+            _materiasServico.Post(materia);
+
+            return StatusCode(StatusCodes.Status201Created, $"Id: {materia.Id}");
         }
     }
 }

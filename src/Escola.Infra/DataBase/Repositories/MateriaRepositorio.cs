@@ -27,7 +27,7 @@ namespace Escola.Infra.DataBase.Repositories
         }
         public Materia GetByName(string name)
         {
-            return _contexto.Materias.Find(name);
+            return _contexto.Materias.FirstOrDefault(x => x.Nome == name);
         }
 
         public void Post(Materia materia)

@@ -11,15 +11,12 @@ namespace Escola.Domain.DTO
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public virtual List<NotasMateria> NotasMaterias { get; set; }
 
         public MateriaDTO(Materia materia)
         {
             Id = materia.Id;
             Nome = materia.Nome;
-            NotasMaterias = materia.NotasMaterias;
         }
-
         public MateriaDTO() { }
     }
 }

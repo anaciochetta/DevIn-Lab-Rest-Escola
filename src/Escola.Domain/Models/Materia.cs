@@ -18,7 +18,6 @@ namespace Escola.Domain.Models
         {
             Id = materia.Id;
             Nome = materia.Nome;
-            NotasMaterias = materia.NotasMaterias;
         }
         public void Update(Materia materia)
         {
@@ -30,7 +29,6 @@ namespace Escola.Domain.Models
         {
             Id = materia.Id;
             Nome = materia.Nome;
-            NotasMaterias = materia.NotasMaterias;
         }
     }
 }

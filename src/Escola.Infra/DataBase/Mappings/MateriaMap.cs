@@ -23,7 +23,7 @@ namespace Escola.Infra.DataBase.Mappings
 
             builder.Property(x => x.Nome)
                     .HasColumnName("NOME")
-                    .HasColumnType("VARCHAR");
+                    .HasColumnType("VARCHAR(50)");
         }
     }
 }
